@@ -1,0 +1,16 @@
+CMAKE_MINIMUM_REQUIRED (VERSION 2.6)
+
+PROJECT(IMAGERSHOW)
+SET(IMAGER_VERSION_MAJOR 0)
+SET(IMAGER_VERSION_MINOR 1)
+
+SET(CMAKE_CXX_FLAGS "-Wno-write-strings -fpermissive")
+
+INCLUDE_DIRECTORIES(../../.. .. ${PROJECT_SOURCE_DIR}/../include ${PROJECT_SOURCE_DIR}/../wrapper)
+LINK_DIRECTORIES(${PROJECT_SOURCE_DIR}/../lib)
+
+LINK_LIBRARIES(PIImager ImageProcessing udev glut GLU)
+ADD_EXECUTABLE(imager_show
+			Obvious2D.cpp
+			main.cpp
+)

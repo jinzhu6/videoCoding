@@ -1,0 +1,10 @@
+guide to run example demo for thermoCam:
+
+1)  sudo rmmod uvcvideo
+    sudo modprobe uvcvideo nodrop=1
+
+2) make 
+
+3) ./imager_show ../../config/12090031.xml
+
+
